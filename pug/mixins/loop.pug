@@ -1,0 +1,9 @@
+mixin loop(count)
+  - var n = 0
+  while n < count
+    block
+    - n++
+
+//- USAGE      
+//- +loop(10)
+//-   p This will appear 10 times

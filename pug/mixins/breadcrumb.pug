@@ -1,0 +1,21 @@
+mixin breadcrumb(levels)
+
+  nav(aria-label="breadcrumb")
+    ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+      
+      each level, index in levels
+
+        //- Index is zero based
+        - var count = index+1
+
+        li.breadcrumb__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a(href="#{level[1]}" aria-level!=count)
+            span(itemprop="name") #{level[0]}
+
+          //- Don't show the divider on the last loop
+          if count < levels.length
+            i.breadcrumb__symbol(aria-hidden="true") /
+          meta(itemprop="position" content!=count)
+    
+//- USAGE      
+//- +breadcrumb([["Home", "/home.html"], ["About", "/about.html"], ["Contact", "/contact.html"]])

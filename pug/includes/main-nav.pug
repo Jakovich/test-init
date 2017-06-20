@@ -1,0 +1,9 @@
+nav.main-nav
+    ul.main-nav__items
+        each val, key in menu
+            if pageTitle === key
+                li(class=["main-nav__item", "main-nav__item--active"])
+                    a(href='#', title=key)= key
+            else
+                li(class=["main-nav__item"])
+                    a(href=val, title=key)= key
