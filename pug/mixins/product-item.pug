@@ -1,0 +1,16 @@
+include btn.pug
+mixin product-item(name, img)
+  article.product-item
+    div.product-item__img
+      img(src=("img/")+img)
+    div.product-item__text
+      h4(class="product-item__name")= name
+      ul.product-item__descr
+        li Charge utile : 1880kg
+        li PTC : 2500 kg
+        li Nb essieu : 2
+        li Dimension utile : 4m10x2m00
+        li Roues : 195/55R10C
+        li Frein : oui
+    +btn("Louer")(class="btn--bold")
+      

@@ -1,6 +1,30 @@
-- var menu = { 'Page 1 name': 'Page 1 href', 'Page 2 name': 'Page 2 href'};
+- var menu = { 'Porte Bateau': '#', 'Quickflex': '#', 'Location / Service':'', 'Entretien':'', 'Qui sommes-nous':''};
 
 header.main-header
-  include main-nav.pug
+  .main-header__top
+    .wrapper
+      a.main-header__ext-link(href="#")
+        |golgoth-store.com
+      .main-header__control
+        .main-header__phone
+        .main-header__lang
+          a(href="#") FR
+          a(href="#") EN
+          a(href="#") IT
+  .main-header__content
+    .wrapper
+      .main-header__info
+        div(class="logo logo--big")
+          | Espace 
+          span Nautique
+        .main-header__user
+          a(href="#") user
+          a(href="#") basket
+      .main-header__nav
+        include main-nav.pug
+        form.main-header__search(action="/" method="GET")
+          input(type=text placeholder="Vous cherchez...")
+          button(type="submit")
+  
   
   

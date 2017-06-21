@@ -1,0 +1,38 @@
+.product-item {
+  float: left;
+  width: 225px;
+  background-color: @gray-bg;
+  margin-left: 10%;
+  &:hover {
+    .product-item__img {
+      transform: scale(1.15) translateY(-20px);
+    }
+  }
+}
+
+.product-item__img {
+  height: 160px;
+  position: relative;
+  transition: @transition;
+  img {
+    position: relative;
+    top: -20px;
+    margin: 0 auto;
+    //transform: translate(-50%, -50%);
+
+  }
+}
+
+.product-item__name {
+  text-align: center;
+}
+
+.product-item__text {
+  padding: 0 15px;
+  padding-bottom: 40px;
+}
+.product-item__descr {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

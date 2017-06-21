@@ -1,5 +1,21 @@
 @import "../node_modules/normalize.less/normalize.less";
 @import "variables.less";
-@import "mixins/image.less";
 @import "blocks/main-header.less";
+@import "blocks/intro.less";
+@import "blocks/description.less";
+@import "blocks/leasing.less";
+@import "blocks/section-title.less";
+@import "blocks/product-item.less";
 @import "blocks/main-footer.less";
+
+@import "blocks/btn.less";
+@import "mixins/clearfix.less";
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  .clearfix();
+  margin: 0 auto;
+  max-width: 1140px;
+}
