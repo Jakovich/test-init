@@ -2,6 +2,7 @@
   background-color: @gray-footer;
   color: @white;
   padding-bottom: 60px;
+  padding-top: 50px;
 }
 
 .main-footer__row {
@@ -18,6 +19,8 @@
 
 .main-footer__row--nav {
   text-align: justify;
+  margin-top: 20px;
+
   &::after {
     width: 100%;
     height: 0px;
@@ -69,19 +72,33 @@
   }
 }
 
+.main-footer__logo {
+  float: left;
+}
+
 .main-footer__form {
   display: block;
   position: relative;
+  padding-left: 180px;
   input {
-    width: 100%;
+    display: block;
     color: @white;
     background-color: @form-bg;
     font-size: 12px;
     padding: 15px;
     border:none;
     outline: none;
+    box-sizing: border-box;
+    width: 100%;
   }
   button {
     position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: @form-bg;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 }
