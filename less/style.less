@@ -1,15 +1,20 @@
 @import "../node_modules/normalize.less/normalize.less";
+@import "sprites/sprite.less";
 @import "variables.less";
 @import "blocks/main-header.less";
+@import "blocks/main-nav.less";
 @import "blocks/intro.less";
 @import "blocks/description.less";
 @import "blocks/leasing.less";
 @import "blocks/section-title.less";
 @import "blocks/product-item.less";
+@import "blocks/logo.less";
 @import "blocks/main-footer.less";
+
 
 @import "blocks/btn.less";
 @import "mixins/clearfix.less";
+@import "mixins/triangle.less";
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -18,4 +23,5 @@ body {
   .clearfix();
   margin: 0 auto;
   max-width: 1140px;
+  padding: 0 15px;
 }

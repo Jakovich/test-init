@@ -1,30 +1,37 @@
-- var menu = { 'Porte Bateau': '#', 'Quickflex': '#', 'Location / Service':'', 'Entretien':'', 'Qui sommes-nous':''};
-
+- var menu = { 'Portes-Bateaux': '#', 'Quickflex': '#', 'Location / Service':'', 'Entretien':'', 'Qui sommes-nous ?':''};
+include ../mixins/svg-icon.pug
 header.main-header
   .main-header__top
     .wrapper
       a.main-header__ext-link(href="#")
+        i
         |golgoth-store.com
       .main-header__control
-        .main-header__phone
+        a.main-header__phone(href="#")
+          +icon('Contact', 'main-header__phone-icon')
         .main-header__lang
-          a(href="#") FR
-          a(href="#") EN
-          a(href="#") IT
+          a(href="#" class="main-header__lang-item main-header__lang-item--active") FR
+          a(href="#" class="main-header__lang-item") EN
+          a(href="#" class="main-header__lang-item") IT
   .main-header__content
     .wrapper
       .main-header__info
-        div(class="logo logo--big")
-          | Espace 
-          span Nautique
+        .main-header__logo
+          div(class="logo logo--big")
+            | Espace 
+            span Nautique
         .main-header__user
-          a(href="#") user
-          a(href="#") basket
+          a(href="#") 
+            +icon('Profil', 'main-header__user-icon')
+          a(href="#")
+            +icon('Panier', 'main-header__basket-icon')
+            span.main-header__count 0
       .main-header__nav
         include main-nav.pug
         form.main-header__search(action="/" method="GET")
           input(type=text placeholder="Vous cherchez...")
           button(type="submit")
+            +icon('Recherche', 'main-header__search-icon')
   
   
   

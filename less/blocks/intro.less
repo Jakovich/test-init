@@ -1,10 +1,79 @@
 .intro {
-  background-color: #4984b6;
-  background-image: url('../img/bg-intro.jpg');
-  background-size: cover;
+    background-color: #4984b6;
+    background-image: url('../img/bg-intro.jpg');
+    background-size: cover;
+    background-position: top center;
+    min-height: 480px;
+    padding-top: 100px;
+    position: relative;
 }
 
 h1 {
-  font-weight: 700;
-  color: @white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: @white;
+    font-size: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.intro__note {
+    font-size: 164px;
+    letter-spacing: -0.02em;
+    float: left;
+    line-height: 131px;
+    
+    i {
+        position: relative;
+        top: 17px;
+        left: -5px;
+        display: inline-block;
+        font-style: normal;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../img/sprites/sprite.png');
+            background-position: @number-offset-x @number-offset-y;
+            width: @number-width;
+            height: @number-height;
+            top: 55px;
+            left: 14px;
+        }
+    }
+}
+
+.intro__exp {
+    max-width: 460px;
+    display: inline-block;
+    margin-left: -15px;
+}
+
+.intro__btn {
+    position: absolute;
+    width: 18px;
+    height: 40px;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -10px;
+    border: none;
+    box-shadow: 0 0 87px 0 #12313f;
+    outline: none;
+    background-color: @white;
+    cursor: pointer;
+    transition: @transition;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &::after {
+        left: -6px;
+        bottom: -20px;
+        position: absolute;
+        transition: @transition;
+        .triangle(down, 30px, 20px, #ffffff);
+    }
 }

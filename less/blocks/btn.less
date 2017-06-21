@@ -2,4 +2,26 @@
   background-color: @rouge;
   color: @white;
   text-decoration: none;
+  transition: @transition;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 16px 0;
+  border: 2px solid @rouge;
+  transition: @transition;
+  &:hover {
+    background-color: @white;
+    color: @rouge;
+  }
+}
+
+.btn--bold {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn--descr {
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 250px;
 }

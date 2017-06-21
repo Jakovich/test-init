@@ -1,13 +1,15 @@
+include ../mixins/svg-icon.pug
 footer.main-footer
   .wrapper
     div(class="main-footer__row")
       .logo
         | Espace 
         span Nautique
-      form
+      form.main-footer__form
         input(type="text" placeholder="Votre email")
         button(type="submit")
-    div(class="main-footer__row")
+          +icon('Recherche', 'main-header__search-icon')
+    div(class="main-footer__row main-footer__row--nav")
       .main-footer__nav
         h4 Porte Bateau
         ul
@@ -63,7 +65,7 @@ footer.main-footer
             a(href="#") Lorem ipsum
           li
             a(href="#") Lorem ipsum
-    div(class="main-footer__row main-footer__row--last")
+    div(class="main-footer__row")
       div.main-footer__detail
         a(href="#") Plan du site
       div.main-footer__detail

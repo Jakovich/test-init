@@ -1,5 +1,6 @@
 nav.main-nav
-    ul.main-nav__items
+  .main-nav__content
+      ul.main-nav__items
         each val, key in menu
             if pageTitle === key
                 li(class=["main-nav__item", "main-nav__item--active"])
@@ -7,6 +8,11 @@ nav.main-nav
             else
                 li(class=["main-nav__item"])
                     a(href=val, title=key)= key
-    button.main-nav__close X      
-    button.main-nav__toggle x
+      button.main-nav__close X      
+  button.main-nav__toggle 
+    svg (version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 33 32" style="enable-background:new 0 0 33 32;" xml:space="preserve")
+      g 
+        path(class="st0" fill="#252525" d="M0,0h33v5.8H0V0z M0,13.1h33v5.8H0V13.1z M0,26.2h33V32H0V26.2z")
+
+
                     

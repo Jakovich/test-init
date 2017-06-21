@@ -1,0 +1,89 @@
+.main-header {
+  color: @gray;
+}
+
+.main-header__top {
+  background-color: @gray;
+}
+
+.main-header__ext-link {
+  background-color: @rouge;
+  color: @white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  padding: 5px 10px;
+  padding-left: 30px;
+  float: left;
+  i {
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    top: 50%;
+    margin-top: -2.5px;
+    left: 15px;
+    background-color: @white;
+    &::after{
+      left: -7px;
+      top: -2.5px;
+      position: absolute;
+      .triangle(left, 10px, 10px, #ffffff);
+
+    }
+  }
+}
+
+.main-header__control {
+  float: right;
+  padding-top: 6px;
+}
+
+.main-header__lang {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 1.5px;
+    top: 3px;
+    left: 0;
+    bottom: 3px;
+    background-color: #999999;
+  }
+
+}
+
+.main-header__phone {
+  width: @-contact-width;
+  height: @-contact-height;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  background-image: url('../img/sprites/sprite.png');
+  background-position: @-contact-offset-x @-contact-offset-y;
+}
+
+.main-header__lang-item {
+  font-size: 12px;
+  font-weight: 900;
+  color: @text-gray;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+  transition: @transition;
+  text-decoration: none;
+  &:hover {
+    color: @white;
+  }
+}
+
+.main-header__lang-item--active {
+  color: @white;
+}
+
+.main-header__info {
+  text-align: center;
+  padding-top: 25px;
+}
